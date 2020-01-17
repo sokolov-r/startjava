@@ -6,29 +6,29 @@ public class ConditionalStatement {
 		char firstLetterName = 'H';
 
 		if (age > 20) {
-			System.out.println("возраст > 20");
+			System.out.println("РІРѕР·СЂР°СЃС‚ > 20");
 		}
 		
 		if (isMan) {
-			System.out.println("мужчина");
+			System.out.println("РјСѓР¶С‡РёРЅР°");
 		}
 		
 		if (!isMan) {
-			System.out.println("женщина");
+			System.out.println("Р¶РµРЅС‰РёРЅР°");
 		}
 
 		if (height < 1.80) {
-			System.out.println("рост < 1.80");
+			System.out.println("СЂРѕСЃС‚ < 1.80");
 		} else {
-			System.out.println("рост >= 1.80");
+			System.out.println("СЂРѕСЃС‚ >= 1.80");
 		}
 
 		if (firstLetterName == 'M') {
-			System.out.println("первая буква имени М");
+			System.out.println("РїРµСЂРІР°СЏ Р±СѓРєРІР° РёРјРµРЅРё Рњ");
 		} else if (firstLetterName == 'I') {
-			System.out.println("первая буква имени I");
+			System.out.println("РїРµСЂРІР°СЏ Р±СѓРєРІР° РёРјРµРЅРё I");
 		} else {
-			System.out.println("первая буква имени не М и не I");
+			System.out.println("РїРµСЂРІР°СЏ Р±СѓРєРІР° РёРјРµРЅРё РЅРµ Рњ Рё РЅРµ I");
 		}
 	}
 }
