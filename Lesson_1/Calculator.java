@@ -1,5 +1,5 @@
 public class Calculator {
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		int a = 3;
 		int b = 2;
 		char operation = '^';
@@ -17,7 +17,7 @@ public class Calculator {
 			result = a % b;
 		} else if (operation == '^') {
 			result = a;
-			for (int i = 2; i <= b; i++){
+			for (int i = 2; i <= b; i++) {
 				result *= a;
 			}
 		}
