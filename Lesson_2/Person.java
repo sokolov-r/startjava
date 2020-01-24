@@ -1,6 +1,6 @@
 public class Person {
 
-	boolean man = true;
+	boolean isMan = true;
 	String name = "Bob";
 	int height = 178;
 	int weight = 80;
@@ -9,12 +9,15 @@ public class Person {
 	void move() {
 		System.out.println("move");
 	}
-	void  sit() {
+
+	void sit() {
 		System.out.println("sit");
 	}
+
 	void run() {
 		System.out.println("run");
 	}
+
 	void learnJava() {
 		System.out.println("learn Java");
 	}
