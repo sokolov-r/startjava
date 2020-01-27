@@ -6,7 +6,7 @@ public class Wolf {
 	private int age;
 	private String color;
 
-	public boolean getIsMale() {
+	public boolean isMale() {
 		return isMale;
 	}
 

@@ -28,7 +28,7 @@ public class JaegerTest {
 	 		if (jaegerCrimson.scanKaiju()) {
 	 			jaegerCrimson.attack();
 	 			jaegerCrimson.setArmor(3);
-	 			System.out.println("Armor = " + jaegerCrimson.armor);
+	 			System.out.println("Armor = " + jaegerCrimson.getArmor());
 	 		}
 	 	}
 
@@ -37,7 +37,7 @@ public class JaegerTest {
 	 		if (jaegerStriker.scanKaiju()) {
 	 			jaegerStriker.attack();
 	 			jaegerStriker.setArmor(5);
-	 			System.out.println("Armor = " + jaegerStriker.armor);
+	 			System.out.println("Armor = " + jaegerStriker.getArmor());
 	 		}
 	 	}
 	 

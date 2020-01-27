@@ -1,52 +1,76 @@
-import java.util.Scanner;
-
 public class Calculator {
 
-	int a;
-	int b;
-	char operation;
-	double result;
-	Scanner scan = new Scanner(System.in);
+	private int a;
+	private int b;
+	private char operation;
+	private double result;
 
-	void inputA() {
+	public int getA() {
+		return a;
+	}
+
+	public void setA(int a) {
+		this.a = a;
+	}
+
+	public int getB() {
+		return b;
+	}
+
+	public void setB(int b) {
+		this.b = b;
+	}
+
+	public char getOperation() {
+		return operation;
+	}
+
+	public void setOperation(char operation) {
+		this.operation = operation;
+	}
+
+	public double getResult() {
+		return result;
+	}
+
+	public void inputA() {
 		System.out.print("Введите первое число: ");
-		a = scan.nextInt();
 	}
 
-	void inputOperation() {
+	public void inputOperation() {
 		System.out.print("Введите знак математической операции: ");
-		operation = scan.next().charAt(0);
 	}
 
-	void inputB() {
+	public void inputB() {
 		System.out.print("Введите второе число: ");
-		b = scan.nextInt();
 	}
 
-	void output() {
-		boolean error = false;
+	public boolean calculate() {
 		switch (operation) {
-			case '+': result = a + b;
-				break;
-			case '-': result = a - b;
-				break;
-			case '*': result = a * b;
-				break;
-			case '/': result = a / b;
-				break;
-			case '%': result = a % b;
-				break;
-			case '^': result = a;
-				for (int i = 2; i <=b; i++){
+			case '+': 
+				result = a + b;
+				return true;
+			case '-': 
+				result = a - b;
+				return true;
+			case '*': 
+				result = a * b;
+				return true;
+			case '/': 
+				result = a / b;
+				return true;
+			case '%': 
+				result = a % b;
+				return true;
+			case '^': 
+				result = a;
+				for (int i = 2; i <= b; i++) {
 					result *= a;
 				}
-				break;
-			default: System.out.println("Неверная операция");
-				error = true;
-				break;
-		}
-		if (!error) {
-		System.out.println(result);
-		}
+				return true;
+			default: 
+				System.out.println("Неверная операция");
+				return false;
+		}	
 	}	
 }
