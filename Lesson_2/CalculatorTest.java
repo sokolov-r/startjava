@@ -8,18 +8,20 @@ public class CalculatorTest {
 		String answer = "";
 
 		while (true) {
+			answer = "";
 			calculatorOne.inputA();
 			calculatorOne.setA(scan.nextInt());
 			calculatorOne.inputOperation();
 			calculatorOne.setOperation(scan.next().charAt(0));
-			calculatorOne.inputB();
-			calculatorOne.setB(scan.nextInt());
-
-			if (calculatorOne.calculate()) {
-				System.out.println(calculatorOne.getResult());
+			if ((calculatorOne.getOperation() == '+') || (calculatorOne.getOperation() == '-') || (calculatorOne.getOperation() == '*') || (calculatorOne.getOperation() == '/') || (calculatorOne.getOperation() == '%') || (calculatorOne.getOperation() == '^')) {
+				calculatorOne.inputB();
+				calculatorOne.setB(scan.nextInt());
+				System.out.println(calculatorOne.calculate());
+			} else {
+				System.out.println("Неверная операция");
 			}
 
-			while (!(answer.equals("да") | answer.equals("нет"))) {
+			while (!(answer.equals("да") || answer.equals("нет"))) {
 				System.out.println("Хотите продолжить? [да/нет]: ");
 				answer = scan.next();
 			}

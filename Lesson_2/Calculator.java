@@ -45,32 +45,31 @@ public class Calculator {
 		System.out.print("Введите второе число: ");
 	}
 
-	public boolean calculate() {
+	public double calculate() {
 		switch (operation) {
 			case '+': 
 				result = a + b;
-				return true;
+				return result;
 			case '-': 
 				result = a - b;
-				return true;
+				return result;
 			case '*': 
 				result = a * b;
-				return true;
+				return result;
 			case '/': 
 				result = a / b;
-				return true;
+				return result;
 			case '%': 
 				result = a % b;
-				return true;
+				return result;
 			case '^': 
 				result = a;
 				for (int i = 2; i <= b; i++) {
 					result *= a;
 				}
-				return true;
+				return result;
 			default: 
-				System.out.println("Неверная операция");
-				return false;
+				return 0;
 		}	
 	}	
 }
