@@ -33,18 +33,6 @@ public class Calculator {
 		return result;
 	}
 
-	public void inputA() {
-		System.out.print("Введите первое число: ");
-	}
-
-	public void inputOperation() {
-		System.out.print("Введите знак математической операции: ");
-	}
-
-	public void inputB() {
-		System.out.print("Введите второе число: ");
-	}
-
 	public double calculate() {
 		switch (operation) {
 			case '+': 

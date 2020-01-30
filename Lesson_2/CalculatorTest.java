@@ -7,28 +7,23 @@ public class CalculatorTest {
 		Scanner scan = new Scanner(System.in);
 		String answer = "";
 
-		while (true) {
-			answer = "";
-			calculatorOne.inputA();
+		while (!(answer.equals("нет"))) {
+			System.out.print("Введите первое число: ");
 			calculatorOne.setA(scan.nextInt());
-			calculatorOne.inputOperation();
+			System.out.print("Введите знак математической операции: ");
 			calculatorOne.setOperation(scan.next().charAt(0));
 			if ((calculatorOne.getOperation() == '+') || (calculatorOne.getOperation() == '-') || (calculatorOne.getOperation() == '*') || (calculatorOne.getOperation() == '/') || (calculatorOne.getOperation() == '%') || (calculatorOne.getOperation() == '^')) {
-				calculatorOne.inputB();
+				System.out.print("Введите второе число: ");
 				calculatorOne.setB(scan.nextInt());
 				System.out.println(calculatorOne.calculate());
 			} else {
 				System.out.println("Неверная операция");
 			}
 
-			while (!(answer.equals("да") || answer.equals("нет"))) {
+			do {
 				System.out.println("Хотите продолжить? [да/нет]: ");
 				answer = scan.next();
-			}
-
-			if (answer.equals("нет")) {
-				break;
-			}
+			} while (!(answer.equals("да") || answer.equals("нет")));
 		}
 	}
 }
