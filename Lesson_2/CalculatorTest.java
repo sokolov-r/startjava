@@ -6,13 +6,16 @@ public class CalculatorTest {
 		Calculator calculatorOne = new Calculator();
 		Scanner scan = new Scanner(System.in);
 		String answer = "";
+		char operation;
 
 		while (!(answer.equals("нет"))) {
 			System.out.print("Введите первое число: ");
 			calculatorOne.setA(scan.nextInt());
 			System.out.print("Введите знак математической операции: ");
-			calculatorOne.setOperation(scan.next().charAt(0));
-			if ((calculatorOne.getOperation() == '+') || (calculatorOne.getOperation() == '-') || (calculatorOne.getOperation() == '*') || (calculatorOne.getOperation() == '/') || (calculatorOne.getOperation() == '%') || (calculatorOne.getOperation() == '^')) {
+			operation = scan.next().charAt(0);
+			if ((operation == '+') || (operation == '-') || (operation == '*') || 
+				(operation == '/') || (operation == '%') || (operation == '^')) {
+				calculatorOne.setOperation(operation);
 				System.out.print("Введите второе число: ");
 				calculatorOne.setB(scan.nextInt());
 				System.out.println(calculatorOne.calculate());
