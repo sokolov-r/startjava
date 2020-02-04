@@ -8,7 +8,7 @@ public class CalculatorTest {
 		String answer = "";
 		char operation;
 
-		while (!(answer.equals("нет"))) {
+		while (!answer.equals("нет")) {
 			System.out.print("Введите первое число: ");
 			calculatorOne.setA(scan.nextInt());
 			System.out.print("Введите знак математической операции: ");
