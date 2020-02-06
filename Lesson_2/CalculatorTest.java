@@ -5,12 +5,13 @@ public class CalculatorTest {
 	public static void main(String[] args) {
 		Calculator calculatorOne = new Calculator();
 		Scanner scan = new Scanner(System.in);
-		String answer = "";
+		String answer;
 		char operation;
 
-		while (!answer.equals("нет")) {
+		do {
 			System.out.print("Введите первое число: ");
 			calculatorOne.setA(scan.nextInt());
+			
 			System.out.print("Введите знак математической операции: ");
 			operation = scan.next().charAt(0);
 			if ((operation == '+') || (operation == '-') || (operation == '*') || 
@@ -27,6 +28,6 @@ public class CalculatorTest {
 				System.out.println("Хотите продолжить? [да/нет]: ");
 				answer = scan.next();
 			} while (!(answer.equals("да") || answer.equals("нет")));
-		}
+		} while (!answer.equals("нет"));
 	}
 }

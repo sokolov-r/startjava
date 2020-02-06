@@ -37,27 +37,28 @@ public class Calculator {
 		switch (operation) {
 			case '+': 
 				result = a + b;
-				return result;
+				break;
 			case '-': 
 				result = a - b;
-				return result;
+				break;
 			case '*': 
 				result = a * b;
-				return result;
+				break;
 			case '/': 
 				result = a / b;
-				return result;
+				break;
 			case '%': 
 				result = a % b;
-				return result;
+				break;
 			case '^': 
 				result = a;
 				for (int i = 2; i <= b; i++) {
 					result *= a;
 				}
-				return result;
+				break;
 			default: 
-				return 0;
-		}	
+				result = 0;
+		}
+		return result;	
 	}	
 }
