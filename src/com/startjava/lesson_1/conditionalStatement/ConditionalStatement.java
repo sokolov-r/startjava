@@ -1,3 +1,5 @@
+package com.startjava.lesson_1.conditionalStatement;
+
 public class ConditionalStatement {
 	public static void main(String[] args) {
 		short age = 5;

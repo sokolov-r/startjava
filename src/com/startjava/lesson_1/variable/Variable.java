@@ -1,10 +1,12 @@
+package com.startjava.lesson_1.variable;
+
 public class Variable {
 	public static void main(String[] args) {
 		boolean isWinOS = true;
 		byte numCore = 2;
 		short sizeRam = 12288;
 		int sizeHdd = 1024;
-		long procHz = 2800000000;
+		long procHz = 2800000000L;
 		float procGHz = 2.8F;
 		double usbVer = 3.1;
 		char usbType = 'C';
@@ -12,7 +14,7 @@ public class Variable {
 		System.out.println(isWinOS);
 		System.out.println(numCore);
 		System.out.println(sizeRam);
-		System.out.println(hdd);
+		System.out.println(sizeHdd);
 		System.out.println(procHz);
 		System.out.println(procGHz);
 		System.out.println(usbVer);
