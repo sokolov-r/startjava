@@ -1,3 +1,5 @@
 *.ini
 *.class
 out
+/.idea/
+/startjava.iml
