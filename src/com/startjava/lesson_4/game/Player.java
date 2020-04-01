@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class Player {
 
 	private String name;
-	private int number;
 	private int numberOfAnswer;
 	private int[] numbers = new int[10];
 
@@ -15,14 +14,6 @@ public class Player {
 
 	public String getName() {
 		return name;
-	}
-
-	public int getNumber() {
-		return number;
-	}
-
-	public void setNumber(int number) {
-		this.number = number;
 	}
 
 	public int getNumberOfAnswer() {
@@ -35,6 +26,10 @@ public class Player {
 
 	public int[] getNumbers() {
 		return Arrays.copyOf(numbers, numberOfAnswer);
+	}
+
+	public int getNumberFromArr() {
+		return numbers[numberOfAnswer];
 	}
 
 	public void setNumberInArr(int number) {
