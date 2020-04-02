@@ -28,15 +28,16 @@ public class Player {
 		return Arrays.copyOf(numbers, numberOfAnswer);
 	}
 
-	public int getNumberFromArr() {
-		return numbers[numberOfAnswer];
+	public int getNumber() {
+		return numbers[numberOfAnswer - 1];
 	}
 
-	public void setNumberInArr(int number) {
+	public void setNumber(int number) {
 		this.numbers[numberOfAnswer] = number;
+		numberOfAnswer++;
 	}
 
-	public void arrayCleaning() {
+	public void clear() {
 		Arrays.fill(numbers, 0, numberOfAnswer, 0);
 	}
 }
