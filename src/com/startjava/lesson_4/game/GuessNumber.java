@@ -50,20 +50,20 @@ public class GuessNumber {
     }
 
     private void inputNumber(Player player) {
-		System.out.println("Отвечает " + player.getName());
-		player.setNumber(scan.nextInt());
-	}
+        System.out.println("Отвечает " + player.getName());
+        player.setNumber(scan.nextInt());
+    }
 
     private boolean compareNumbers(Player player) {
         if (player.getNumber() == randomNumber) {
-			System.out.println("Игрок " + player.getName() + " угадал число " + randomNumber + " c " + (player.getNumberOfAnswer()) + " попытки");
-			return true;
-		} else if (player.getNumber() > randomNumber) {
-			System.out.println("Загаданное число меньше");
-		} else if (player.getNumber() < randomNumber) {
-			System.out.println("Загаданное число больше");
-		}
-    	return false;
+            System.out.println("Игрок " + player.getName() + " угадал число " + randomNumber + " c " + (player.getNumberOfAnswer()) + " попытки");
+            return true;
+        } else if (player.getNumber() > randomNumber) {
+            System.out.println("Загаданное число меньше");
+        } else if (player.getNumber() < randomNumber) {
+            System.out.println("Загаданное число больше");
+        }
+        return false;
     }
 
     private void printAnswers(Player player) {
